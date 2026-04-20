@@ -13,10 +13,21 @@
   <body style="margin: 0; overflow: hidden">
     <a-scene embedded arjs="source:webcam;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;">
       <a-camera
-        gps-camera="simulateLatitude:-6.175628;simulateLongitude:106.827188"
+        gps-camera="simulateLatitude:40.916738;simulateLongitude:38.324505"
         rotation-reader
       >
+
+       <a-text
+        value="DENİZZZZZZZZZZZZZ"
+        scale="15 15 15 "
+        look-at="[gps-camera]"
+        align="center"
+        gps-entity-place="latitude:40.917113;longitude:38.325014;"
+      ></a-text>
+
+        
       </a-camera>
+      
     </a-scene>
   </body>
 </html>
