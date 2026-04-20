@@ -11,45 +11,12 @@
   </head>
 
   <body style="margin: 0; overflow: hidden">
-    <script>
-      AFRAME.registerComponent("locationfinder", {
-        init: function () {
-          navigator.geolocation.getCurrentPosition(function (location) {
-            console.log(location);
-          });
-        },
-      });
-    </script>
-
     <a-scene embedded arjs="source:webcam;sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;">
       <a-camera
         gps-camera="simulateLatitude:-6.175628;simulateLongitude:106.827188"
         rotation-reader
       >
       </a-camera>
-
-      <a-text
-        value="Patung diponogoro"
-        scale="15 15 15 "
-        look-at="[gps-camera]"
-        align="center"
-        gps-entity-place="latitude:-6.173708;longitude:106.827184;"
-      ></a-text>
-
-      <a-text>
-        value="Patung Kartini"
-        scale="15 15 15 "
-        look-at="[gps-camera]"
-        align="center"
-        gps-entity-place="latitude:-6.175679  ;longitude:106.829368;"
-      ></a-text>
-      <a-text
-        value="Patung Thamrin"
-        scale="15 15 15 "
-        look-at="[gps-camera]"
-        align="center"
-        gps-entity-place="latitude:-6.175391;longitude:106.824907;"
-      ></a-text>
     </a-scene>
   </body>
 </html>
